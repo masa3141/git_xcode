@@ -19,7 +19,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     NSString *str = @"あいうえお";
-    NSLog(@"%@",str);
+    for (int i=0; i<[str length]; i++) {
+        NSLog(@"%@", [str substringWithRange:NSMakeRange(i,1)]);
+    }
 }
 
 - (void)didReceiveMemoryWarning
